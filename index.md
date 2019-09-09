@@ -1,39 +1,154 @@
-## Welcome to 我的网页
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body,
+			ul,
+			ol,
+			li,
+			p,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			form,
+			fieldset,
+			table,
+			td,
+			img,
+			div{
+				margin: 0;
+				padding: 0;
+				border: 0;
+			}
 
+			body {
+				background: #fff;
+				color: #333;
+				font-size: 12px;
+				margin-top: 5px;
+				font-family: "SimSun", "宋体", "Arial Narrow";
+			}
 
+			ul,
+			
+			}
 
-You can use the [editor on GitHub](https://github.com/AlexandreDumas4464/abouttime/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+			select,
+			input,
+			img,
+			select {
+				vertical-align: middle;
+			}
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+			a {
+				text-decoration: none;
+			}
 
-### Markdown
+			a:link {
+				color: #009;
+			}
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+			a:visited {
+				color: #800080;
+			}
 
-```markdown
-Syntax highlighted code block
+			a:hover,
+			a:active,
+			a:focus {
+				color: #c00;
+				text-decoration: underline;
+			}
 
-# Header 1
-## Header 2
-### Header 3
+			#Receive1,
+			#Receive2,
+			#Receive3 {
+				width: 100px;
+				height: 50px;
+				background: #EDD0BE;
+				font-size: 20px;
+				float: left;
+				color: #E03636;
+				border: #25C6FC;
+				margin: 0px 10px;
+				position: relative;
+				top: 13px;
 
-- Bulleted
-- List
+			}
 
-1. Numbered
-2. List
+			#Receive2 {
+				top: 250px;
+			}
 
-**Bold** and _Italic_ and `Code` text
+			#Refuse1,
+			#Refuse2,
+			#Refuse3 {
+				width: 100px;
+				height: 50px;
+				background: #C1194E;
+				font-size: 20px;
+				color: #AAB8A3;
+				border: #FF5983;
+				float: right;
+				margin: 0px 10px;
+				position: relative;
+			}
 
-[Link](url) and ![Image](src)
-```
+			#Refuse2 {
+				top: 238px;
+			}
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+			#haha {
+				width: 800px;
+				height: 400px;
+				background: #008000;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="haha">
+			<h1 class="DO">Do you like Me ? </h1>
+			<button id="Receive1" class="receive1" onclick='on1()'>Yes</button>
+			<button id="Refuse1" class="refuse1" onclick='on4()'>NO</button>
+			<button id="Refuse2" class="refuse2" onclick='on5()'>NO</button>
+			<button id="Refuse3" class="refuse3" onclick='on6()'>NO</button>
+		<!-- <canvas id="Canvas" width="500" height="300"></canvas> -->
+		</div>
+	</body>
+	<!-- <script type="text/javascript">
+		var CV = document.getElementById("Canvas");
+		var cxt = CV.getContext("2d");
+		/* 画平行线 */
+		cxt.moveTo(100,100);
+		cxt.lineTo(200,100);
+		/* 描边 */
+		cxt.stroke();
+	</script> -->
+	<script type="text/javascript">
+		var re1 = document.getElementById('Receive1'),
+			ref1 = document.getElementById('Refuse1'),
+			ref2 = document.getElementById('Refuse2'),
+			ref3 = document.getElementById('Refuse3');
+		ref2.style.visibility = 'hidden',
+		ref3.style.visibility = 'hidden'
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/AlexandreDumas4464/abouttime/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+		ref1.onmouseover =function(){
+			ref2.style.visibility= 'visible',
+			ref1.style.visibility= 'hidden'
+		}
+		ref2.onmouseover = function(){
+			ref2.style.visibility= 'hidden',
+			ref1.style.visibility= 'hidden'
+			ref3.style.visibility= 'visible'
+		}
+		ref3.onmouseover = function(){
+			ref2.style.visibility= 'hidden',
+			ref1.style.visibility= 'visible'
+			ref3.style.visibility= 'hidden'
+		}
+	</script>
+</html>
