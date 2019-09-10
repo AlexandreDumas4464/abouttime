@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body,
+			ul,
+			ol,
+			li,
+			p,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			form,
+			fieldset,
+			table,
+			td,
+			img,
+			div{
+				margin: 0;
+				padding: 0;
+				border: 0;
+			}
+
+			body {
+				background: #fff;
+				color: #333;
+				font-size: 12px;
+				margin-top: 5px;
+				font-family: "SimSun", "宋体", "Arial Narrow";
+			}
+
+			ul,
+			ol {
+				list-style-type: none;
+			}
+
+			select,
+			input,
+			img,
+			select {
+				vertical-align: middle;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			a:link {
+				color: #009;
+			}
+
+			a:visited {
+				color: #800080;
+			}
+
+			a:hover,
+			a:active,
+			a:focus {
+				color: #c00;
+				text-decoration: underline;
+			}
+
+			#Receive1,
+			#Receive2,
+			#Receive3 {
+				width: 100px;
+				height: 50px;
+				background: #EDD0BE;
+				font-size: 20px;
+				float: left;
+				color: #E03636;
+				border: #25C6FC;
+				margin: 0px 10px;
+				position: relative;
+				top: 13px;
+
+			}
+
+			#Receive2 {
+				top: 250px;
+			}
+
+			#Refuse1,
+			#Refuse2,
+			#Refuse3 {
+				width: 100px;
+				height: 50px;
+				background: #C1194E;
+				font-size: 20px;
+				color: #AAB8A3;
+				border: #FF5983;
+				float: right;
+				margin: 0px 10px;
+				position: relative;
+			}
+
+			#Refuse2 {
+				top: 238px;
+			}
+
+			#haha {
+				width: 800px;
+				height: 400px;
+				background: #008000;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="haha">
+			<h1 class="DO">Do you like Me ? </h1>
+			<button id="Receive1" class="receive1" onclick='on1()'>Yes</button>
+			<button id="Refuse1" class="refuse1" onclick='on4()'>NO</button>
+			<button id="Refuse2" class="refuse2" onclick='on5()'>NO</button>
+			<button id="Refuse3" class="refuse3" onclick='on6()'>NO</button>
+		<!-- <canvas id="Canvas" width="500" height="300"></canvas> -->
+		</div>
+	</body>
+	<!-- <script type="text/javascript">
+		var CV = document.getElementById("Canvas");
+		var cxt = CV.getContext("2d");
+		/* 画平行线 */
+		cxt.moveTo(100,100);
+		cxt.lineTo(200,100);
+		/* 描边 */
+		cxt.stroke();
+	</script> -->
+	<script type="text/javascript">
+		var re1 = document.getElementById('Receive1'),
+			ref1 = document.getElementById('Refuse1'),
+			ref2 = document.getElementById('Refuse2'),
+			ref3 = document.getElementById('Refuse3');
+		ref2.style.visibility = 'hidden',
+		ref3.style.visibility = 'hidden'
+
+		ref1.onmouseover =function(){
+			ref2.style.visibility= 'visible',
+			ref1.style.visibility= 'hidden'
+		}
+		ref2.onmouseover = function(){
+			ref2.style.visibility= 'hidden',
+			ref1.style.visibility= 'hidden'
+			ref3.style.visibility= 'visible'
+		}
+		ref3.onmouseover = function(){
+			ref2.style.visibility= 'hidden',
+			ref1.style.visibility= 'visible'
+			ref3.style.visibility= 'hidden'
+		}
+	</script>
+</html>
